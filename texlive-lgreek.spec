@@ -1,3 +1,9 @@
+# revision 21818
+# category Package
+# catalog-ctan /macros/latex/contrib/lgreek
+# catalog-date 2011-03-14 20:27:38 +0100
+# catalog-license gpl2
+# catalog-version undef
 Name:		texlive-lgreek
 Version:	20110314
 Release:	1
@@ -42,6 +48,7 @@ LaTeX.
 %doc %{_texmfdistdir}/doc/latex/lgreek/README
 %doc %{_texmfdistdir}/doc/latex/lgreek/lgreekuse.pdf
 %doc %{_texmfdistdir}/doc/latex/lgreek/lgreekuse.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -52,3 +59,5 @@ LaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
