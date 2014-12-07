@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-lgreek
 Version:	20110314
-Release:	8
+Release:	9
 Summary:	LaTeX macros for using Silvio Levy's Greek fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lgreek
