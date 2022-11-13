@@ -1,18 +1,12 @@
-# revision 21818
-# category Package
-# catalog-ctan /macros/latex/contrib/lgreek
-# catalog-date 2011-03-14 20:27:38 +0100
-# catalog-license gpl2
-# catalog-version undef
 Name:		texlive-lgreek
-Version:	20190228
+Version:	21818
 Release:	1
 Summary:	LaTeX macros for using Silvio Levy's Greek fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lgreek
 License:	GPL2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lgreek.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lgreek.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lgreek.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lgreek.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ A conversion of Silvio Levy's Plain TeX macros for use with
 LaTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,24 +36,10 @@ LaTeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110314-2
-+ Revision: 753299
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110314-1
-+ Revision: 718851
-- texlive-lgreek
-- texlive-lgreek
-- texlive-lgreek
-- texlive-lgreek
-
