@@ -3,7 +3,7 @@ Version:	21818
 Release:	2
 Summary:	LaTeX macros for using Silvio Levy's Greek fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lgreek
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/lgreek
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lgreek.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lgreek.doc.r%{version}.tar.xz
